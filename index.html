@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Number Guesser</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <h1>Number Guesser!</h1>
+      </header>
+      
+      <div class="rounds">
+        <p class="round-label">Раунд <span id="round-number">1</span></p>
+        <p class="guess-label">Выбранное число: <span id="target-number">?</span></p>
+      </div>
+
+      <div class="guessing-area">
+        <div class="guess computer-guess">
+          <div class="guess-title">
+            <p class="guess-label">Компьютер</p>
+            <p class="score-label">Счет: <span id="computer-score">0</span></p>
+          </div>
+          <p id="computer-guess">?</p>
+          <p class="winning-text" id="computer-wins"></p>
+        </div>
+        <div class="guess human-guess">
+          <div class="guess-title">
+            <p class="guess-label">Вы</p>
+            <p class="score-label">Счет: <span id="human-score">0</span></p>
+          </div>
+          <input type="number" id="human-guess" min=0 max=9 value=0>
+          <div class="number-controls">
+            <button class="number-control left" id="subtract" disabled>-</button>
+            <button class="number-control right" id="add">+</button>
+          </div>
+          <button class="button" id="guess">УГАДАТЬ!</button>
+        </div>
+      </div>
+
+      <div class="next-round-container">
+        <button class="button" id="next-round" disabled>Следующий раунд</button>
+      </div>
+
+    </div>
+    
+    <div class="instructions">
+      <div class="instruction">
+        <h3>Шаг 1</h3>
+        <p>Введите число от 0 до 9.</p>
+      </div>
+      <div class="instruction">
+        <h3>Шаг 2</h3>
+        <p>Нажмите «Угадай», чтобы представить свое предположение и узнать, кто выиграл раунд.</p>
+      </div>
+      <div class="instruction">
+        <h3>Шаг 3</h3>
+        <p>Нажмите «Следующий раунд», чтобы сыграть снова..</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
